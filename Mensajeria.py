@@ -14,13 +14,20 @@ def Quick_sort(lista):
 while True:
     print(f"\nBienvenido")
     print("1. Ingresar repartidor")
-    print("2. Salir")
+    print("2. Ordenamiento de repartidor")
+    print("3. Salir")
 
     opcion = input("Ingrese una opcion: ")
     if opcion == "1":
-        Cantidad = int(input("Ingrese cantidad de repartidors: "))
+        Cantidad = int(input("Ingrese cantidad de repartidores: "))
         for i in range(Cantidad):
             print(f"\nRepartidor {i + 1}")
             Nombre = input("Ingrese nombre: ")
-            Paquete = int(input("Ingrese paquete: "))
+            Paquete = int(input("Ingrese la cantidad de paquete que desea: "))
             Zona = input("Ingrese zona: ")
+            Repartido[Nombre] = {
+                "Paquete": Paquete,
+                "Zona": Zona
+            }
+    elif opcion == "2":
+        print()
