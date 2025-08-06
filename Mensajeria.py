@@ -30,4 +30,16 @@ while True:
                 "Zona": Zona
             }
     elif opcion == "2":
-        print()
+        if not Repartido:
+            print("No se ha encontrado la repartidor")
+        else:
+            Nombres = [Datos["Nombre"] for Datos in Repartido.values()]
+            Ordenado = Quick_sort(Nombres)
+            print("lista de paquetes ordenadas")
+            for Nombre in Ordenado:
+                print(Nombre)
+    elif opcion == "3":
+        print("Saliendo")
+        break
+    else:
+        print("Opcion invalida")
